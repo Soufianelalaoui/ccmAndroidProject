@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+
+    <EditText
+        android:id="@+id/editTextEmailAddress"
+        android:layout_width="334dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="334dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLoginRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress"
+        android:autofillHints=""
+        android:text="@string/password" />
+
+    <Button
+        android:id="@+id/buttonLoginRegister"
+        android:layout_width="181dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSwitchLoginregister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textViewSwitchLoginregister"
+        android:layout_width="222dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="147dp"
+        android:layout_weight="2"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoginRegister" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

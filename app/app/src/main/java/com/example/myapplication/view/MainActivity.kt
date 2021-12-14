@@ -6,17 +6,15 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.example.myapplication.viewModel.LoginViewModel
+import com.example.myapplication.tp4.view.Tp4Activity
 import com.example.myapplication.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -46,18 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         mViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         setContentView(view)
-        if (ContextCompat.checkSelfPermission(this@MainActivity,
-                Manifest.permission.ACCESS_FINE_LOCATION) !==
-            PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this@MainActivity,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                ActivityCompat.requestPermissions(this@MainActivity,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1)
-            } else {
-                ActivityCompat.requestPermissions(this@MainActivity,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1)
-            }
-        }
     }
 
     override fun onStart() {
@@ -93,5 +79,10 @@ class MainActivity : AppCompatActivity() {
                 return
             }
         }
+    }
+
+    fun onClickOpenRecyclerView(view: View) {
+        val intent = Intent(this, Tp4Activity::class.java)
+        startActivity(intent)
     }
 }
