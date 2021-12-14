@@ -28,10 +28,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else{
-            binding.user.text = "utilisateur " + it.email
+            binding.user.text = "utilisateur :" + it.email
         }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -41,8 +42,8 @@ class MainActivity : AppCompatActivity() {
         binding.buttonDeconnexion.setOnClickListener{signOut()}
 
 
-
         mViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        binding.version.text = "Version :" + mViewModel.mCurrentVersion.toString()
         setContentView(view)
     }
 
@@ -58,27 +59,6 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         mViewModel.mCurrentUser.removeObserver(mObserverUser)
-    }
-
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,
-                                            grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when (requestCode) {
-            1 -> {
-                if (grantResults.isNotEmpty() && grantResults[0] ==
-                    PackageManager.PERMISSION_GRANTED) {
-                    if ((ContextCompat.checkSelfPermission(this@MainActivity,
-                            Manifest.permission.ACCESS_FINE_LOCATION) ===
-                                PackageManager.PERMISSION_GRANTED)) {
-                        Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
-                }
-                return
-            }
-        }
     }
 
     fun onClickOpenRecyclerView(view: View) {

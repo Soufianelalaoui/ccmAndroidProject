@@ -3,4 +3,5 @@
     <string name="app_name">My Application</string>
     <string name="add">ajouter</string>
     <string name="delete_all">supprimer</string>
+    <string name="register">register</string>
 </resources>
