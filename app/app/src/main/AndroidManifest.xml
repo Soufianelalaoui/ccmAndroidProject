@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.myapplication.tp4.view.Tp4Activity"/>
+        <activity android:parentActivityName=".view.MainActivity" android:name="com.example.myapplication.tp4.view.Tp4Activity"/>
         <activity android:name="com.example.myapplication.view.MainActivity"/>
         <service
             android:name=".architecture.service.MyFirebaseMessagingService"

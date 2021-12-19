@@ -2,9 +2,10 @@
 <resources>
     <string name="add">add</string>
     <string name="delete_all">delete all</string>
-    <string name="d_connexion">Déconnexion</string>
+    <string name="d_connexion">Sign out</string>
     <string name="api">API</string>
     <string name="email">email</string>
     <string name="password">PASSWORD</string>
     <string name="register">register</string>
+    <string name="el_fathi_lalaoui_soufiane" translatable="false">EL FATHI LALAOUI SOUFIANE</string>
 </resources>

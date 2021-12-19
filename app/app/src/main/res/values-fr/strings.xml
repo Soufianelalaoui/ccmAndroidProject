@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Mon Application</string>
     <string name="add">ajouter</string>
-    <string name="delete_all">supprimer</string>
-    <string name="register">register</string>
+    <string name="delete_all">supprimer tout</string>
+    <string name="register">Créé un compte</string>
+    <string name="d_connexion">Déconnexion</string>
+    <string name="api">API</string>
+    <string name="email">email</string>
+    <string name="password">Mot de passe</string>
+    <string name="appname">Projet android</string>
+    <string name="delete">supprimer</string>
 </resources>
